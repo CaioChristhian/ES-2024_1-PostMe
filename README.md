@@ -110,3 +110,59 @@ Aqui está o texto sem a tabela:
 ## Fluxo alternativo
 1. O ator já possui uma conta no sistema.
 2. O ator clica no botão "Já tenho uma conta. Fazer Login." e é redirecionado para tela de Login.
+
+# Engenharia de Software - 2024.1 | Universidade Federal do Tocantins
+## PostMe
+
+## RF03 - Realizar Publicação
+
+### Atributos
+
+| Item            | Descrição                                                                                     |
+|-----------------|-----------------------------------------------------------------------------------------------|
+| Caso de Uso     | Realizar Publicação                                                                           |
+| Resumo          | Permitir que os usuários publiquem fotos e textos em um feed dinâmico e interativo na plataforma. |
+| Ator principal  | Usuário interessado em compartilhar conteúdo na plataforma PostMe.                            |
+| Pré-condição    | - O ator principal deve estar autenticado na plataforma.                                      |
+| Pós-condição    | A publicação deve ser exibida no feed da plataforma para todos os usuários.                   |
+
+## Descrição sucinta 
+Realizar a publicação de fotos e textos na plataforma.
+
+## Fluxo principal
+
+1. O usuário acessa a plataforma PostMe e faz login na sua conta.
+2. Na página principal, o usuário encontra o botão "Nova Publicação" e clica nele.
+3. Escolhe entre fazer uma publicação de texto ou de imagem.
+4. Preenche os campos obrigatórios, como título (para textos) ou descrição (para imagens) e conteúdo.
+5. Adiciona hashtags relevantes para ampliar a visibilidade da publicação.
+6. Seleciona a opção de privacidade desejada (pública, privada ou apenas para amigos).
+7. Clica em "Publicar" para compartilhar a publicação no feed da plataforma.
+
+## Campos do formulário de publicação:
+
+| Campo             | Obrigatório? | Editável? | Formato             |
+|-------------------|--------------|-----------|---------------------|
+| Título (para texto)| Sim          | Sim       | Texto               |
+| Descrição (para imagem)| Sim       | Sim       | Texto               |
+| Conteúdo           | Sim          | Sim       | Texto               |
+| Hashtags           | Não          | Sim       | Texto separado por vírgulas |
+
+## Opções do usuário
+
+| Opção                 | Descrição                                                                       |
+|-----------------------|---------------------------------------------------------------------------------|
+| Publicar              | Permite ao usuário compartilhar sua publicação no feed da plataforma.           |
+| Cancelar              | Permite ao usuário cancelar a criação da publicação e retornar ao feed principal.|
+
+## Relatório do usuário
+
+| Campo                    | Descrição                                                                       | Formato |
+|--------------------------|---------------------------------------------------------------------------------|---------|
+| Publicação realizada com sucesso | Confirma ao usuário que sua publicação foi compartilhada no feed da plataforma. | Texto   |
+
+## Fluxo alternativo
+
+1. O ator decide cancelar a publicação antes de clicar em "Publicar".
+2. O ator clica no botão "Cancelar" e retorna ao feed principal sem publicar nada.
+
