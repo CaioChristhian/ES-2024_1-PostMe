@@ -6,13 +6,13 @@ O PostMe é uma plataforma inovadora que permite aos usuários expressarem-se li
 ### Definindo os requisitos e seus colaboradores.
 ---
 #### Primeiro commit
-- RF01 - Realizar Login do Usuário. Por [Cayke Daniel Pereira Veras](https://github.com/cayke1)
+- [X] RF01 - Realizar Login do Usuário. Por [Cayke Daniel Pereira Veras](https://github.com/cayke1) Revisado por @CaioChristhian
 
-- RF02 - Realizar Cadastro do Usuário. Por [Caio Christhian Lopes Silva](https://github.com/CaioChristhian)
+- [X] RF02 - Realizar Cadastro do Usuário. Por [Caio Christhian Lopes Silva](https://github.com/CaioChristhian) Revisado por @cayke1
 
-- RF03 - Realizar Publicações. Por [Henrique Noronha Fernandes](https://github.com/henrique-noronha)
+- [X] RF03 - Realizar Publicações. Por [Henrique Noronha Fernandes](https://github.com/henrique-noronha) Revisado por @CaioChristhian
 
-- RF04 - Editar Perfil. Por [Ykaro Silva](https://github.com/ykarosilva)
+- [X] RF04 - Editar Perfil. Por [Caio Christhian Lopes Silva](https://github.com/CaioChristhian) Revisado por @cayke1
 
 - RF05 - Listagem de Publicações no feed. Por [Eduardo Henrique Coelho Ramos](https://github.com/KiwiProgamador)
 
@@ -113,8 +113,7 @@ Aqui está o texto sem a tabela:
 1. O ator já possui uma conta no sistema.
 2. O ator clica no botão "Já tenho uma conta. Fazer Login." e é redirecionado para tela de Login.
 
-# Engenharia de Software - 2024.1 | Universidade Federal do Tocantins
-## PostMe
+---
 
 ## RF03 - Realizar Publicação
 
@@ -167,8 +166,6 @@ Realizar a publicação de fotos e textos na plataforma.
 
 1. O ator decide cancelar a publicação antes de clicar em "Publicar".
 2. O ator clica no botão "Cancelar" e retorna ao feed principal sem publicar nada.
-
-
 
 ---
 
