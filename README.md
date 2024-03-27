@@ -6,15 +6,61 @@ O PostMe é uma plataforma inovadora que permite aos usuários expressarem-se li
 ### Definindo os requisitos e seus colaboradores.
 ---
 #### Primeiro commit
-- RF01 - Realizar Login do Usuário. Por [Cayke Daniel Pereira Veras](https://github.com/cayke1)
+- [X] RF01 - Realizar Login do Usuário. Por [Cayke Daniel Pereira Veras](https://github.com/cayke1) Revisado por @CaioChristhian
 
-- RF02 - Realizar Cadastro do Usuário. Por [Caio Christhian Lopes Silva](https://github.com/CaioChristhian)
+- [X] RF02 - Realizar Cadastro do Usuário. Por [Caio Christhian Lopes Silva](https://github.com/CaioChristhian) Revisado por @cayke1
 
-- RF03 - Realizar Publicações. Por [Henrique Noronha Fernandes](https://github.com/henrique-noronha)
+- [X] RF03 - Realizar Publicações. Por [Henrique Noronha Fernandes](https://github.com/henrique-noronha) Revisado por @CaioChristhian
 
-- RF04 - Editar Perfil. Por [Ykaro Silva](https://github.com/ykarosilva)
+- [X] RF04 - Editar Perfil. Por [Caio Christhian Lopes Silva](https://github.com/CaioChristhian) Revisado por @cayke1
 
-- RF05 - Listagem de Publicações no feed. Por [Eduardo Henrique Coelho Ramos](https://github.com/KiwiProgamador)
+- [X] RF05 - Listagem de Publicações no feed. Por [Eduardo Henrique Coelho Ramos](https://github.com/KiwiProgamador) Revisado por @CaioChristhian
+
+---
+
+## RF01 - Realizar Login do Usuário
+
+### Atributos
+
+|Item|Descrição|
+| -- |    -    |
+|Caso de Uso| Realizar Login do Usuário|
+|Resumo| Permitir que um usuário cadastrado acesse as funcionalidades do site através de seu login e senha. O processo de login deve ser seguro e acessível para o usuário.|
+|Ator principal| Usuário cadastrado no site.|
+|Pré-condição|O ator principal deve estar cadastrado no sistema com um nome de usuário válido e uma senha válida.|
+|Pós-condição|O ator principal deve estar autenticado no sistema.|
+
+### Descrição sucinta 
+Realizar o login do usuário na plataforma.
+
+### Fluxo principal
+1. O usuário acessa o blog do PostMe e é apresentada a tela inicial.
+2. Na tela inicial, o usuário encontra um formulário de login com campos para preencher com seu nome de usuário e senha.
+3. Após preencher o formulário, clica no botão "Login".
+4. O sistema verifica os dados fornecidos pelo usuário.
+   - Se correto, ele é redirecionado para a página inicial, autenticado no sistema.
+   - Se estiver incorreto, irá retornar mensagens de erro no formulário de login.
+
+### Campos do formulário de login:
+
+| Campo            | Obrigatório? | Editável? | Formato      |
+|------------------|--------------|-----------|--------------|
+| Nome de Usuário  | Sim          | Sim       | Texto        |
+| Senha            | Sim          | Sim       | Alfanumérico |
+
+### Opções do usuário
+| Opção                 | Descrição                                                      |
+|-----------------------|----------------------------------------------------------------|
+| Login no sistema      | Permite ao usuário acessar o sistema utilizando suas credenciais.|
+
+### Relatório do usuário
+| Campo                    | Descrição                                                                       | Formato |
+|--------------------------|---------------------------------------------------------------------------------|---------|
+| Autenticado com sucesso  | Assegura o usuário do resultado positivo da autenticação no sistema.            | Texto   |
+
+### Fluxo alternativo
+1. O ator não possui uma conta no sistema.
+2. O ator clica no botão "Criar uma conta" e é redirecionado para tela de cadastro conforme o RF02.
 
 ---
 
@@ -69,33 +115,110 @@ Aqui está o texto sem a tabela:
 
 ---
 
-## RF05 - Listagem de Publicações no Feed
+## RF03 - Realizar Publicação
+
+### Atributos
+
+| Item            | Descrição                                                                                     |
+|-----------------|-----------------------------------------------------------------------------------------------|
+| Caso de Uso     | Realizar Publicação                                                                           |
+| Resumo          | Permitir que os usuários publiquem fotos e textos em um feed dinâmico e interativo na plataforma. |
+| Ator principal  | Usuário interessado em compartilhar conteúdo na plataforma PostMe.                            |
+| Pré-condição    | - O ator principal deve estar autenticado na plataforma.                                      |
+| Pós-condição    | A publicação deve ser exibida no feed da plataforma para todos os usuários.                   |
+
+## Descrição sucinta 
+Realizar a publicação de fotos e textos na plataforma.
+
+## Fluxo principal
+
+1. O usuário acessa a plataforma PostMe e faz login na sua conta.
+2. Na página principal, o usuário encontra o botão "Nova Publicação" e clica nele.
+3. Escolhe entre fazer uma publicação de texto ou de imagem.
+4. Preenche os campos obrigatórios, como título (para textos) ou descrição (para imagens) e conteúdo.
+5. Adiciona hashtags relevantes para ampliar a visibilidade da publicação.
+6. Seleciona a opção de privacidade desejada (pública, privada ou apenas para amigos).
+7. Clica em "Publicar" para compartilhar a publicação no feed da plataforma.
+
+## Campos do formulário de publicação:
+
+| Campo             | Obrigatório? | Editável? | Formato             |
+|-------------------|--------------|-----------|---------------------|
+| Título (para texto)| Sim          | Sim       | Texto               |
+| Descrição (para imagem)| Sim       | Sim       | Texto               |
+| Conteúdo           | Sim          | Sim       | Texto               |
+| Hashtags           | Não          | Sim       | Texto separado por vírgulas |
+
+## Opções do usuário
+
+| Opção                 | Descrição                                                                       |
+|-----------------------|---------------------------------------------------------------------------------|
+| Publicar              | Permite ao usuário compartilhar sua publicação no feed da plataforma.           |
+| Cancelar              | Permite ao usuário cancelar a criação da publicação e retornar ao feed principal.|
+
+## Relatório do usuário
+
+| Campo                    | Descrição                                                                       | Formato |
+|--------------------------|---------------------------------------------------------------------------------|---------|
+| Publicação realizada com sucesso | Confirma ao usuário que sua publicação foi compartilhada no feed da plataforma. | Texto   |
+
+## Fluxo alternativo
+
+1. O ator decide cancelar a publicação antes de clicar em "Publicar".
+2. O ator clica no botão "Cancelar" e retorna ao feed principal sem publicar nada.
+
+---
+
+## RF04 - Editar Perfil do Usuário
 
 ### Atributos
 
 |Item|Descrição|
 | -- |    -    |
-|Caso de Uso| Visualizar as Publicações |
-|Resumo| Permitir que os usuários visualizem uma lista de publicações no feed principal da plataforma, apresentando conteúdo diversificado compartilhado por outros usuários.|
-|Ator principal| Usuário logado na plataforma.|
-|Pré-condição| O usuário deve estar autenticado no sistema.|
-|Pós-condição| O usuário visualiza as publicações no feed.|
+|Caso de Uso| Editar Perfil do Usuário|
+|Resumo| Permitir que um usuário cadastrado e logado possa editar as informações de seu perfil no sistema. O processo de edição deve ser simples e intuitivo.|
+|Ator principal| Usuário logado desejando atualizar suas informações pessoais.|
+|Pré-condição|O ator principal deve estar logado no sistema. O ator precisa ter acesso à página de edição de perfil.|
+|Pós-condição|	As informações do perfil do ator principal são atualizadas no sistema.|
 
 ## Descrição sucinta 
-Exibir uma lista de publicações no feed principal da plataforma, permitindo que os usuários vejam conteúdo compartilhado por outros usuários.
- 
+Permitir que o usuário atualize informações de seu perfil na plataforma.
+
 ## Fluxo principal
 Aqui está o texto sem a tabela:
 
-1. O usuário logado acessa a página inicial ou o feed da plataforma.
-2. Na página inicial ou no feed, são exibidas as publicações mais recentes dos usuários que o usuário logado segue.
-3. Cada publicação é apresentada com informações como autor, data de postagem, conteúdo da publicação (texto, imagem, ou ambos) e interações possíveis (curtidas, comentários, compartilhamentos).
-4. O usuário pode interagir com as publicações, como curtir, comentar ou compartilhar.
-5. O feed é atualizado periodicamente para exibir novas publicações e atualizações nas publicações existentes.
+1. O usuário logado acessa a seção de perfil no site.
+2. Na seção de perfil, o usuário encontra um botão ou link intitulado “Editar Perfil” e clica nele para acessar a tela de edição.
+3. Exibe um formulário de edição de perfil com os campos preenchidos com as informações atuais do usuário.
+4. O usuário atualiza as informações que deseja modificar.
+5. Após realizar as alterações, clica no botão "Salvar Alterações".
+6. O sistema verifica os dados fornecidos pelo usuário.
+   - Se correto, as informações são atualizadas, e o usuário é redirecionado para a página de perfil com uma mensagem de sucesso.
+   - Se estiver incorreto, irá retornar mensagens de erro no formulário.
 
-## Fluxo alternativoFluxo Alternativo
-1. Não há novas publicações ou o usuário não segue nenhum outro usuário.
-2. O feed pode exibir publicações recomendadas com base nos interesses do usuário, tendências da plataforma ou conteúdo popular
+## Campos do formulário de edição de perfil:
+
+| Campo            | Obrigatório? | Editável? | Formato      |
+|------------------|--------------|-----------|--------------|
+| Nome de Usuário  | Sim          | Sim       | Texto        |
+| Email            | Sim          | Sim       | Texto        |
+| Senha            | Não          | Sim       | Alfanumérico |
+| Foto de Perfil   | Não          | Sim       | Arquivo      |
+
+## Opções do usuário
+| Opção                 | Descrição                                                      |
+|-----------------------|----------------------------------------------------------------|
+| Salvar Alterações	   | Permite ao usuário salvar as alterações feitas no perfil.      |
+| Cancelar              | Permite ao usuário cancelar as alterações e voltar ao perfil sem salvar. |
+
+## Relatório do usuário
+| Campo                         | Descrição                                                                       | Formato |
+|-------------------------------|---------------------------------------------------------------------------------|---------|
+| Alterações salvas com sucesso | Informa o usuário que as alterações no perfil foram salvas com sucesso.         | Texto   |
+
+## Fluxo alternativo
+1. O usuário decide não alterar nenhuma informação após acessar a tela de edição de perfil.
+2. O usuário clica no botão ou link "Cancelar" e é redirecionado de volta ao seu perfil sem realizar alterações.
 
 ---
 
