@@ -14,7 +14,7 @@ O PostMe é uma plataforma inovadora que permite aos usuários expressarem-se li
 
 - [X] RF04 - Editar Perfil. Por [Caio Christhian Lopes Silva](https://github.com/CaioChristhian) Revisado por @cayke1
 
-- RF05 - Listagem de Publicações no feed. Por [Eduardo Henrique Coelho Ramos](https://github.com/KiwiProgamador)
+- [X] RF05 - Listagem de Publicações no feed. Por [Eduardo Henrique Coelho Ramos](https://github.com/KiwiProgamador) Revisado por @CaioChristhian
 
 ---
 
@@ -219,3 +219,33 @@ Aqui está o texto sem a tabela:
 ## Fluxo alternativo
 1. O usuário decide não alterar nenhuma informação após acessar a tela de edição de perfil.
 2. O usuário clica no botão ou link "Cancelar" e é redirecionado de volta ao seu perfil sem realizar alterações.
+
+---
+
+## RF05 - Listagem de Publicações no Feed
+
+### Atributos
+
+|Item|Descrição|
+| -- |    -    |
+|Caso de Uso| Visualizar as Publicações |
+|Resumo| Permitir que os usuários visualizem uma lista de publicações no feed principal da plataforma, apresentando conteúdo diversificado compartilhado por outros usuários.|
+|Ator principal| Usuário logado na plataforma.|
+|Pré-condição| O usuário deve estar autenticado no sistema.|
+|Pós-condição| O usuário visualiza as publicações no feed.|
+
+## Descrição sucinta 
+Exibir uma lista de publicações no feed principal da plataforma, permitindo que os usuários vejam conteúdo compartilhado por outros usuários.
+ 
+## Fluxo principal
+Aqui está o texto sem a tabela:
+
+1. O usuário logado acessa a página inicial ou o feed da plataforma.
+2. Na página inicial ou no feed, são exibidas as publicações mais recentes dos usuários que o usuário logado segue.
+3. Cada publicação é apresentada com informações como autor, data de postagem, conteúdo da publicação (texto, imagem, ou ambos) e interações possíveis (curtidas, comentários, compartilhamentos).
+4. O usuário pode interagir com as publicações, como curtir, comentar ou compartilhar.
+5. O feed é atualizado periodicamente para exibir novas publicações e atualizações nas publicações existentes.
+
+## Fluxo alternativoFluxo Alternativo
+1. Não há novas publicações ou o usuário não segue nenhum outro usuário.
+2. O feed pode exibir publicações recomendadas com base nos interesses do usuário, tendências da plataforma ou conteúdo popular.
