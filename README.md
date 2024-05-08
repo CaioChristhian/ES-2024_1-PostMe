@@ -249,3 +249,19 @@ Aqui está o texto sem a tabela:
 ## Fluxo alternativoFluxo Alternativo
 1. Não há novas publicações ou o usuário não segue nenhum outro usuário.
 2. O feed pode exibir publicações recomendadas com base nos interesses do usuário, tendências da plataforma ou conteúdo popular.
+   
+## Planejamento e Conclusões
+1. Adicionar a documentação em markdown no repositório GitHub, concluído por Caio Christhian (27/03/24)
+2. Adicionar a feat. RF01, adiciona a documentação do projeto as características da feature Realizar Login do Usuário, concluído por Cayke Daniel Pereira Veras e revisado por Caio Christhian (27/03/24).
+3. Adicionar a feat. RF02, adiciona a documentação do projeto as características da feature Realizar Cadastro do Usuário, concluído por Caio Christhian Lopes Silva e revisado por Cayke Daniel Pereira Veras  (27/03/24). 
+4. Adicionar a feat. RF03, adiciona a documentação do projeto as características da feature Realizar Publicações, concluído or Henrique Noronha Fernandes Revisado por Caio Christhian (27/03/24).
+5. Adicionar a feat. RF04, Adiciona a documentação do projeto as características da feature Editar Perfil concluído por Caio Christhian Lopes Silva Revisado por Cayke Daniel Pereira Veras (27/03/24).
+6. Adicionar a feat. RF05, Adiciona a documentação do projeto as características da feature Listagem de Publicações no feed concluído por Eduardo Henrique Coelho Ramos Revisado por Caio Christhian (27/03/24). 
+7. Draw.io, Fazer o planejamento do projeto utilizando o Draw.io, concluído por todos os membros do grupo (02/04/2024). https://drive.google.com/file/d/11TrkXos6DFXIQ8DXCn1a3aGZc7uVvkC4/view
+8. Desenvolver uma nova feat. para a tela de login, concluído por Cayke Daniel Pereira (17/04/2024).
+9. Desenvolver uma nova feat. para a listagem de posts, concluído por Henrique Noronha (17/04/2024).
+10. Desenvolver uma nova feat. para configuração do BD, concluído por Caio Christhian (17/04/2024).
+11. Alteração Index.php, adicionar uma forma para que caso seja indetificado que o usuário não esteja logado ele será redirecionado ao login.php, concluído por Eduardo Henrique (06/04/2024)
+12. Alteração register.php, criar uma página para o usuário realizar o "Formulário de cadastro", de forma simplificada onde ele adiciona o user e senha com a confirmação da senha e adicionar um link para direcionar ao login.php para caso o usuario já tenha conta, concluído por Eduardo Henrique (06/04/2024).
+13. Alteração login.php, Alterar o visual e adicionar um link para direcionar ao register.php caso o usuario não tenha registro,  concluído por Eduardo Henrique (06/04/2024).
+14. Aprimorar a documentação do projeto. Concluído por Henrique Noronha  Fernandes (07/05/2024).
