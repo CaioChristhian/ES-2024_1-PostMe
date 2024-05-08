@@ -1,3 +1,10 @@
+<?php
+//session_start();
+//if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+//   header("location: login.php");
+//   exit;
+//}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -78,5 +85,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>
