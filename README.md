@@ -252,26 +252,26 @@ Aqui está o texto sem a tabela:
    
 ## Planejamento e Conclusões
 ### Concluído até 27/03/2024
-1. **Documentação em Markdown:** Adicionada ao repositório por [Caio Christhian](https://github.com/CaioChristhian).
-2. **Feature RF01 - Login do Usuário:** Documentação adicionada por [Cayke Daniel Pereira Veras](https://github.com/cayke1) e revisada por [Caio Christhian](https://github.com/CaioChristhian).
-3. **Feature RF02 - Cadastro do Usuário:** Documentação adicionada por [Caio Christhian Lopes Silva](https://github.com/CaioChristhian) e revisada por [Cayke Daniel Pereira Veras](https://github.com/cayke1).
-4. **Feature RF03 - Publicações:** Documentação adicionada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha) e revisada por [Caio Christhian](https://github.com/CaioChristhian).
-5. **Feature RF04 - Editar Perfil:** Documentação adicionada por [Caio Christhian Lopes Silva](https://github.com/CaioChristhian) e revisada por [Cayke Daniel Pereira Veras](https://github.com/cayke1).
-6. **Feature RF05 - Listagem de Publicações no Feed:** Documentação adicionada por [Eduardo Henrique Coelho Ramos](https://github.com/Kiwitheprogrammer) e revisada por [Caio Christhian](https://github.com/CaioChristhian).
+1. **Documentação em Markdown:** Adicionada ao repositório por [Caio Christhian](https://github.com/CaioChristhian/ES-2024_1-PostMe).
+2. **Feature RF01 - [Login do Usuário](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/RF01):** Documentação adicionada por [Cayke Daniel Pereira Veras](https://github.com/cayke1) e revisada por [Caio Christhian](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/RF01).
+3. **Feature RF02 - [Cadastro do Usuário](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/RF02):** Documentação adicionada por [Caio Christhian Lopes Silva](https://github.com/CaioChristhian) e revisada por [Cayke Daniel Pereira Veras](https://github.com/cayke1).
+4. **Feature RF03 - [Publicações](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/4b1c7e693bfa59e7ef738dcaffe54e9a84a94d1b):** Documentação adicionada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha) e revisada por [Caio Christhian](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/4b1c7e693bfa59e7ef738dcaffe54e9a84a94d1b).
+5. **Feature RF04 - [Editar Perfil](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/RF04):** Documentação adicionada por [Caio Christhian Lopes Silva](https://github.com/CaioChristhian) e revisada por [Cayke Daniel Pereira Veras](https://github.com/cayke1).
+6. **Feature RF05 - [Listagem de Publicações no Feed](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/RF05):** Documentação adicionada por [Eduardo Henrique Coelho Ramos](https://github.com/Kiwitheprogrammer) e revisada por [Caio Christhian](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/RF05).
 
 ### Concluído até 02/04/2024
 1. **Planejamento no Draw.io:** Concluído por todos os membros do grupo.
    - [Link do planejamento no Draw.io](https://drive.google.com/file/d/11TrkXos6DFXIQ8DXCn1a3aGZc7uVvkC4/view)
 
 ### Concluído até 17/04/2024
-1. **Nova Feature - Tela de Login:** Desenvolvida por [Cayke Daniel Pereira Veras](https://github.com/cayke1).
-2. **Nova Feature - Listagem de Posts:** Desenvolvida por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
-3. **Nova Feature - Configuração do Banco de Dados:** Desenvolvida por [Caio Christhian](https://github.com/CaioChristhian).
+1. **Nova Feature - [Tela de Login](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/login):** Desenvolvida por [Cayke Daniel Pereira Veras](https://github.com/cayke1).
+2. **Nova Feature - [Listagem de Posts](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/home-listagem):** Desenvolvida por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
+3. **Nova Feature - [Configuração do Banco de Dados](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/config-database):** Desenvolvida por [Caio Christhian](https://github.com/CaioChristhian).
 
 ### Concluído até 06/05/2024
-1. **Alteração Index.php:** Redirecionamento para login.php se o usuário não estiver logado, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
-2. **Alteração register.php:** Página simplificada para cadastro com link para login, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisado por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
-3. **Alteração login.php:** Visual alterado e link para registro adicionado, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
+1. **Alteração [Index.php](https://github.com/CaioChristhian/ES-2024_1-PostMe/blob/develop/index.php):** Redirecionamento para login.php se o usuário não estiver logado, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer).
+2. **Alteração [Register.php](https://github.com/CaioChristhian/ES-2024_1-PostMe/blob/develop/register.php):** Página simplificada para cadastro com link para login, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer).
+3. **Alteração [Login.php](https://github.com/CaioChristhian/ES-2024_1-PostMe/blob/develop/login.php):** Visual alterado e link para registro adicionado, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer).
 
 ### Concluído até 14/05/2024
 1. **Aprimorar a Documentação do Projeto:** Concluído por [Henrique Noronha Fernandes](https://github.com/henrique-noronha). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
