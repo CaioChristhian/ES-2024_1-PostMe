@@ -277,3 +277,7 @@ Aqui está o texto sem a tabela:
 1. **Aprimorar a Documentação do Projeto:** Concluído por [Henrique Noronha Fernandes](https://github.com/henrique-noronha). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
 
 2.  **Simplificar a Iteração do Projeto:** Concluído por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
+
+   ### Links Úteis
+- **Trello:** [Quadro do PostMe no Trello](https://trello.com/b/MxqWN374/postme)
+
