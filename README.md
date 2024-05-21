@@ -264,19 +264,22 @@ Aqui está o texto sem a tabela:
    - [Link do planejamento no Draw.io](https://drive.google.com/file/d/11TrkXos6DFXIQ8DXCn1a3aGZc7uVvkC4/view)
 
 ### Concluído até 17/04/2024
-1. **Nova Feature - [Tela de Login](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/login):** Desenvolvida por [Cayke Daniel Pereira Veras](https://github.com/cayke1).
-2. **Nova Feature - [Listagem de Posts](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/home-listagem):** Desenvolvida por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
-3. **Nova Feature - [Configuração do Banco de Dados](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/config-database):** Desenvolvida por [Caio Christhian](https://github.com/CaioChristhian).
+1. **Nova Feature - [Tela de Login](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/login):** Desenvolvida por [Cayke Daniel Pereira Veras](https://github.com/cayke1). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
+2. **Nova Feature - [Listagem de Posts](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/home-listagem):** Desenvolvida por [Henrique Noronha Fernandes](https://github.com/henrique-noronha). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
+3. **Nova Feature - [Configuração do Banco de Dados](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/config-database):** Desenvolvida por [Caio Christhian](https://github.com/CaioChristhian). Revisada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
 
 ### Concluído até 06/05/2024
-1. **Alteração [Index.php](https://github.com/CaioChristhian/ES-2024_1-PostMe/blob/develop/index.php):** Redirecionamento para login.php se o usuário não estiver logado, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer).
-2. **Alteração [Register.php](https://github.com/CaioChristhian/ES-2024_1-PostMe/blob/develop/register.php):** Página simplificada para cadastro com link para login, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer).
-3. **Alteração [Login.php](https://github.com/CaioChristhian/ES-2024_1-PostMe/blob/develop/login.php):** Visual alterado e link para registro adicionado, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer).
+1. **Alteração [Index.php](https://github.com/CaioChristhian/ES-2024_1-PostMe/blob/develop/index.php):** Redirecionamento para login.php se o usuário não estiver logado, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer).  Revisado por [Caio Christhian](https://github.com/CaioChristhian).
+2. **Alteração [Register.php](https://github.com/CaioChristhian/ES-2024_1-PostMe/blob/develop/register.php):** Página simplificada para cadastro com link para login, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
+3. **Alteração [Login.php](https://github.com/CaioChristhian/ES-2024_1-PostMe/blob/develop/login.php):** Visual alterado e link para registro adicionado, por [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
 
 ### Concluído até 14/05/2024
 1. **Aprimorar a Documentação do Projeto:** Concluído por [Henrique Noronha Fernandes](https://github.com/henrique-noronha). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
 
-2.  **Simplificar a Iteração do Projeto:** Concluído por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
+2.  **Simplificar a Iteração do Projeto:** Concluído por [Henrique Noronha Fernandes](https://github.com/henrique-noronha). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
+
+### Concluído até 21/05/2024
+1. Restruturação da Aplicação para o [Padrão MVC](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/refatorando-para-o-padrao-mvc)  Desenvolvida por [Caio Christhian](https://github.com/CaioChristhian) e Revisada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
 
    ### Links Úteis
 - **Trello:** [Quadro do PostMe no Trello](https://trello.com/b/MxqWN374/postme)
