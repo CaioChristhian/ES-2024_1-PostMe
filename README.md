@@ -279,8 +279,9 @@ Aqui está o texto sem a tabela:
 2.  **Simplificar a Iteração do Projeto:** Concluído por [Henrique Noronha Fernandes](https://github.com/henrique-noronha). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
 
 ### Concluído até 21/05/2024
-1. Restruturação da Aplicação para o [Padrão MVC](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/refatorando-para-o-padrao-mvc) e adição de sessions à aplicação.  Desenvolvida por [Caio Christhian](https://github.com/CaioChristhian) e Revisada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
+1. Restruturação da Aplicação para o [Padrão MVC](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/refatorando-para-o-padrao-mvc) e adição de sessions à aplicação. Desenvolvida por [Caio Christhian](https://github.com/CaioChristhian) e Revisada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
 
    ### Links Úteis
+   
 - **Trello:** [Quadro do PostMe no Trello](https://trello.com/b/MxqWN374/postme)
 
