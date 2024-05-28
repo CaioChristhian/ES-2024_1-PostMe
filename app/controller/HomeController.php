@@ -1,5 +1,5 @@
 <?php
-require_once '../model/PostModel.php';
+require_once BASE_PATH . '/app/model/PostModel.php';
 
 class HomeController {
   private $postModel;
@@ -10,7 +10,7 @@ class HomeController {
 
   public function index() {
     $posts = $this->postModel->getPosts();
-    require_once '../view/home.php';
+    require_once BASE_PATH . '/app/view/login.php';
   }
 
   public function addPost($username, $text) {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../app/controller/HomeController.php';
+require_once BASE_PATH . '/app/controller/HomeController.php';
 
 $controller = new HomeController();
 
