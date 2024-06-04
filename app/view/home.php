@@ -8,31 +8,42 @@
 </head>
 <body>
 <div class="container mt-5">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-        <h2 class="text-center">PostMe</h2>
-        <hr>
-        <form method="post" class="mb-5">
-            <div class="form-group">
-                <label for="user">Nome do usuário:</label>
-                <input type="text" id="user" name="user" class="form-control" required>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center">PostMe</h2>
+            <hr>
+            <!-- Botão de Logout e Nome do Usuário -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h5">Logado como: <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></span>
+                <form action="/post-me/public/logout" method="post" style="display: inline-block;">
+                    <button type="submit" class="btn btn-danger">Logout</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="text">Texto do post:</label>
-                <textarea id="text" name="text" class="form-control" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-        <?php foreach ($posts as $post) {
-            echo "<div class='card mb-3'>
-              <div class='card-body'>
-                  <h5 class='card-title'>".$post["username"]."</h5>
-                  <p class='card-text'>".$post["texto"]."</p>
-              </div>
-            </div>";
-        } ?>
+            <hr>
+            <!-- Formulário para postagem -->
+            <form method="post" class="mb-5">
+                <div class="form-group">
+                    <label for="text">Texto do post:</label>
+                    <textarea id="text" name="text" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            <h2 class="text-center">Feed:</h2>
+            <hr>
+            <!-- Exibição dos posts -->
+            <?php foreach ($posts as $post) {
+                echo "<div class='card mb-3'>
+                  <div class='card-body'>
+                      <h5 class='card-title'>" . htmlspecialchars($post["username"]) . "</h5>
+                      <p class='card-text'>" . htmlspecialchars($post["texto"]) . "</p>
+                  </div>
+                </div>";
+            } ?>
+        </div>
     </div>
-  </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
