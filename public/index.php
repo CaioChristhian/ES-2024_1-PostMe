@@ -19,6 +19,14 @@ $path = preg_replace("~^$prefix~", '', $path);
 $path = preg_replace('/\.php$/', '', $path);
 
 switch ($path) {
+    case '/profile':
+        $controller = new AuthController();
+        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            $usernamesearch = $_GET['username'];
+            $controller->search($usernamesearch);
+        }
+        break;
+
     case '/login':
     case '/register':
         $controller = new AuthController();

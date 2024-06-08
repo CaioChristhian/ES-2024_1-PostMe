@@ -19,12 +19,24 @@
                     <button type="submit" class="btn btn-danger">Logout</button>
                 </form>
             </div>
+             <!-- Teste de Pesquisa pelo Usuario -->
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <form action="/post-me/public/profile" method="get" class="form-inline">
+                <input type="hidden" name="action" value="search">
+                <label for="username" class="mr-2">Pesquise pelo Usuario:</label>
+                <input type="text" id="username" name="username" class="form-control mr-2" required>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </nav>
+
             <hr>
+            
             <!-- Formulário para postagem -->
             <form method="post" class="mb-5">
                 <div class="form-group">
                     <label for="text">Texto do post:</label>
                     <textarea id="text" name="text" class="form-control" required></textarea>
+                    <p> Limite de 280 caracteres</p>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
