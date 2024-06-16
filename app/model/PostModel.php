@@ -21,6 +21,13 @@ class PostModel {
     $stmt->execute();
     return $stmt->affected_rows > 0;
   }
+  
+  public function addbio($bio, $user_id) { //Adicionar Bio
+
+    $stmt = $this->conn->prepare("UPDATE users SET bio = ? WHERE id = ?");
+    $stmt->execute([$bio, $user_id]);
+    return $stmt->affected_rows > 0;
+  }
 
   public function getPostsUser($username) { //Pegar Post apenas do Usuario pesquisado [INCOMPLETO]
     $query = "SELECT id, username, texto FROM posts ORDER BY id DESC";

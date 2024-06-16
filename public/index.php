@@ -19,12 +19,17 @@ $path = preg_replace("~^$prefix~", '', $path);
 $path = preg_replace('/\.php$/', '', $path);
 
 switch ($path) {
-    case '/profile':
+    case '/search':
         $controller = new AuthController();
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $usernamesearch = $_GET['username'];
             $controller->search($usernamesearch);
         }
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST ['save']) ) {
+            $controllerHome = new HomeController();
+            $controllerHome->addbio($_POST ['bio']);
+        }
+
         break;
 
     case '/login':

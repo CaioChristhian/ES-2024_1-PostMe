@@ -22,6 +22,7 @@ class AuthController {
             $_SESSION['usernamesearch'] = $user['username'];
             $_SESSION['followerssearch'] = $user['followers'];
             $_SESSION['followingsearch'] = $user['following'];
+            $_SESSION['searchbio']= $user['bio'];
             require_once ("../app/view/profile.php");
         } else {
             echo ("Usuário não existe"); //Caso não venha a encontrar [Mudar depois]
@@ -38,6 +39,7 @@ class AuthController {
             header("Location: /post-me/public/home");
             exit;
         } else {
+            header("Location: /post-me/public/login");
             echo ("Usuário não existe"); //Caso não venha a encontrar [Mudar depois]
         }
     }
