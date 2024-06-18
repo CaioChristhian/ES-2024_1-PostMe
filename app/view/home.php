@@ -11,6 +11,13 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <h2 class="text-center">PostMe</h2>
+            <!-- Notificação de erro -->
+                        <?php if (isset($_SESSION['error_message'])): ?>
+                <div class="alert alert-danger">
+                    <?= htmlspecialchars($_SESSION['error_message']); ?>
+                </div>
+                <?php unset($_SESSION['error_message']); // Remove a mensagem após exibi-la ?>
+            <?php endif; ?>
             <hr>
             <!-- Botão de Logout e Nome do Usuário -->
             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -19,15 +26,17 @@
                     <button type="submit" class="btn btn-danger">Logout</button>
                 </form>
             </div>
-             <!-- Teste de Pesquisa pelo Usuario -->
+             <!-- Pesquisa pelo Usuario -->
         <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <div class="form-group">
             <form action="/post-me/public/search" method="get" class="form-inline">
                 <input type="hidden" name="action" value="search">
                 <label for="username" class="mr-2">Pesquise pelo Usuario:</label>
                 <input type="text" id="username" name="username" class="form-control mr-2" required>
                 <button type="submit" class="btn btn-primary">Search</button>
+            </div>
             </form>
-        </nav>
+            </nav>
 
             <hr>
             
@@ -40,13 +49,15 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
-            <h2 class="text-center">Feed:</h2>
+            <h2 class="text-center">Feed</h2>
             <hr>
             <!-- Exibição dos posts -->
             <?php foreach ($posts as $post) {
                 echo "<div class='card mb-3'>
                   <div class='card-body'>
-                      <h5 class='card-title'>" . htmlspecialchars($post["username"]) . "</h5>
+                      <h5 class='card-title'>
+                           <a href='/post-me/public/search?username=" . urlencode($post["username"]) . "' style='text-decoration: none; color: inherit;'>" . htmlspecialchars($post["username"]) . "</a>
+                        </h5>
                       <p class='card-text'>" . htmlspecialchars($post["texto"]) . "</p>
                   </div>
                 </div>";

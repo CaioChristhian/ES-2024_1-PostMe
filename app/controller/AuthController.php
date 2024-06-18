@@ -17,30 +17,31 @@ class AuthController {
     public function search($usernamesearch) {
         $posts = $this->postModel->getPosts();
         $user = $this->userModel->getUserByUsername($usernamesearch);
-        if ($user) { //Informações do Usuario Pesquisado
+        if ($user) { // Informações do Usuário Pesquisado
             $_SESSION['search_id'] = $user['id'];
             $_SESSION['usernamesearch'] = $user['username'];
             $_SESSION['followerssearch'] = $user['followers'];
             $_SESSION['followingsearch'] = $user['following'];
-            $_SESSION['searchbio']= $user['bio'];
+            $_SESSION['searchbio'] = $user['bio'];
             require_once ("../app/view/profile.php");
         } else {
-            echo ("Usuário não existe"); //Caso não venha a encontrar [Mudar depois]
-            require_once ("../app/view/profile.php");
+            $_SESSION['error_message'] = "Usuário não existe"; // Armazena a mensagem de erro na sessão
+            require_once ("../app/view/home.php");
         }
     }
 
     public function login($username, $password) {
         $user = $this->userModel->getUserByUsername($username);
-        if ($user && password_verify($password, $user['password'])) { //Informações do Usuario para login
+        if ($user && password_verify($password, $user['password'])) { // Informações do Usuário para login
             $_SESSION['loggedin'] = true;
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             header("Location: /post-me/public/home");
             exit;
         } else {
+            $_SESSION['error_message'] = "Usuário ou senha inválidos";
             header("Location: /post-me/public/login");
-            echo ("Usuário não existe"); //Caso não venha a encontrar [Mudar depois]
+            exit;
         }
     }
 
@@ -56,10 +57,9 @@ class AuthController {
             header("Location: /post-me/public/login");  // Redireciona para a página de login após o registro bem-sucedido
             exit;
         } else {
-            return false;
+            $_SESSION['error_message'] = "Nome de usuário já existe";
+            header("Location: /post-me/public/register");
+            exit;
         }
     }
 }
-
-
-  

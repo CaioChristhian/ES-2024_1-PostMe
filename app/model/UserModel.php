@@ -15,6 +15,12 @@ class UserModel {
     }
 
     public function createUser($username, $password) {
+        // Verifica se o usuário já existe
+        if ($this->getUserByUsername($username)) {
+            return false; // Retorna false se o usuário já existir
+        }
+
+        // Cria um novo usuário se ele não existir
         $stmt = $this->conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();

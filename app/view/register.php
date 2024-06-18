@@ -1,3 +1,9 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,6 +19,12 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="card-title text-center">Cadastre-se</h3>
+                    <?php
+                    if (isset($_SESSION['error_message'])) {
+                        echo '<div class="alert alert-danger text-center">' . $_SESSION['error_message'] . '</div>';
+                        unset($_SESSION['error_message']); // Limpa a mensagem de erro após exibi-la
+                    }
+                    ?>
                     <form action="/post-me/public/register" method="post">
                         <input type="hidden" name="action" value="register">
                         <div class="form-group">
