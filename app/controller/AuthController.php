@@ -23,10 +23,10 @@ class AuthController {
             $_SESSION['followerssearch'] = $user['followers'];
             $_SESSION['followingsearch'] = $user['following'];
             $_SESSION['searchbio'] = $user['bio'];
-            require_once ("../app/view/profile.php");
+            require_once(__DIR__ . '/../view/profile.php');
         } else {
             $_SESSION['error_message'] = "Usuário não existe"; // Armazena a mensagem de erro na sessão
-            require_once ("../app/view/home.php");
+            require_once(__DIR__ . '/../view/home.php');
         }
     }
 

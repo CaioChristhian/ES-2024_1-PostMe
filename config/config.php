@@ -3,7 +3,7 @@ return [
   'database' => [
     'host' => 'localhost',
     'username' => 'root',
-    'password' => '481516',
+    'password' => 'kronoscaio',
     'dbname' => 'postme',
     'charset' => 'utf8'
   ],
