@@ -10,8 +10,8 @@ function redirectToLoginIfNotLoggedIn() {
     }
 }
 
-require_once '../app/controller/HomeController.php';
-require_once '../app/controller/AuthController.php';
+require_once __DIR__ . '/../app/controller/HomeController.php';
+require_once __DIR__ . '/../app/controller/AuthController.php';
 
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $prefix = '/post-me/public'; // Ajuste conforme necessário
@@ -46,7 +46,7 @@ switch ($path) {
                 $controller->register($username, $password);
             }
         } else {
-            require "../app/view{$path}.php";
+            require_once __DIR__ . "/../app/view{$path}.php";
         }
         break;
     case '/logout':

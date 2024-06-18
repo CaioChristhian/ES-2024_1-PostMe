@@ -2,7 +2,7 @@
 class Database {
   private $servername = "localhost";
   private $username = "root";
-  private $password = "481516";
+  private $password = "kronoscaio";
   private $dbname = "postme";
 
   public function getConnection() {
