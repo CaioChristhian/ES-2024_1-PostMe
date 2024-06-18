@@ -26,11 +26,5 @@ class UserModel {
         $stmt->execute();
         return $stmt->affected_rows > 0;
     }
-
-    public function updateUserBio($username, $bio) {
-        $stmt = $this->conn->prepare("UPDATE users SET bio = ? WHERE username = ?");
-        $stmt->execute([$bio, $username]);
-        return $stmt->affected_rows > 0;
-    }
 }
 
