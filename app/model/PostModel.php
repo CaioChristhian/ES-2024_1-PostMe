@@ -8,17 +8,30 @@ class PostModel {
     $this->conn = (new Database())->getConnection();
   }
 
-  public function getPosts() {
+  public function getPosts() { //Pegar Post dos Usuarios
     $query = "SELECT id, username, texto FROM posts ORDER BY id DESC";
     $result = $this->conn->query($query);
     return $result;
   }
 
-  public function addPost($username, $text) {
+  public function addPost($username, $text) { //Adicionar Post
     $query = "INSERT INTO posts (username, texto) VALUES (?, ?)";
     $stmt = $this->conn->prepare($query);
     $stmt->bind_param("ss", $username, $text);
     $stmt->execute();
     return $stmt->affected_rows > 0;
+  }
+  
+  public function addbio($bio, $user_id) { //Adicionar Bio
+
+    $stmt = $this->conn->prepare("UPDATE users SET bio = ? WHERE id = ?");
+    $stmt->execute([$bio, $user_id]);
+    return $stmt->affected_rows > 0;
+  }
+
+  public function getPostsUser($username) { //Pegar Post apenas do Usuario pesquisado [INCOMPLETO]
+    $query = "SELECT id, username, texto FROM posts ORDER BY id DESC";
+    $result = $this->conn->query($query);
+    return $result;
   }
 }
