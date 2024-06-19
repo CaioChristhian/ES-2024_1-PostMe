@@ -22,6 +22,27 @@ class HomeController {
         echo "O texto do post não pode ser vazio.";
     }
 }
+    
+    public function addbio($bio) {
+        if (!empty($bio)) {
+            $user_id = $_SESSION['user_id'];  
+            $this->postModel->addbio($bio, $user_id);
+            echo "<script type='text/javascript'>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Recarregar a página após 2 segundos
+                setTimeout(function() {
+                    window.location.reload();
+                }, 2000);
+            });
+          </script>"    ;
+        require_once ("../app/view/profile.php");
+            
+        } else {
+            echo "A bio do post não pode ser vazio.";
+            require_once ("../view/profile.php");
+
+        }
+}
 
 }
 

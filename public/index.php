@@ -10,8 +10,8 @@ function redirectToLoginIfNotLoggedIn() {
     }
 }
 
-require_once '../app/controller/HomeController.php';
-require_once '../app/controller/AuthController.php';
+require_once __DIR__ . '/../app/controller/HomeController.php';
+require_once __DIR__ . '/../app/controller/AuthController.php';
 
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $prefix = '/post-me/public'; // Ajuste conforme necessário
@@ -19,6 +19,19 @@ $path = preg_replace("~^$prefix~", '', $path);
 $path = preg_replace('/\.php$/', '', $path);
 
 switch ($path) {
+    case '/search':
+        $controller = new AuthController();
+        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            $usernamesearch = $_GET['username'];
+            $controller->search($usernamesearch);
+        }
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST ['save']) ) {
+            $controllerHome = new HomeController();
+            $controllerHome->addbio($_POST ['bio']);
+        }
+
+        break;
+
     case '/login':
     case '/register':
         $controller = new AuthController();
@@ -33,7 +46,7 @@ switch ($path) {
                 $controller->register($username, $password);
             }
         } else {
-            require "../app/view{$path}.php";
+            require_once __DIR__ . "/../app/view{$path}.php";
         }
         break;
     case '/logout':

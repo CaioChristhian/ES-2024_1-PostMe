@@ -12,6 +12,13 @@
         <div class="col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-body">
+                <!-- Notificação de erro -->
+                <?php if (isset($_SESSION['error_message'])): ?>
+                <div class="alert alert-danger">
+                    <?= htmlspecialchars($_SESSION['error_message']); ?>
+                </div>
+                <?php unset($_SESSION['error_message']); // Remove a mensagem após exibi-la ?>
+                <?php endif; ?>
                     <h3 class="card-title text-center">Login</h3>
                     <form action="/post-me/public/login" method="post">
                         <input type="hidden" name="action" value="login">
