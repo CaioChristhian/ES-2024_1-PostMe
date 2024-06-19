@@ -113,20 +113,27 @@ Exibir uma lista de publicações no feed principal da plataforma, permitindo qu
 ### Iteração 3 - 21/05/2024
 **Valor:** O valor desta iteração está na divisão da aplicação em três camadas distintas: a camada de interação do usuário (view), a camada de manipulação dos dados (model) e a camada de controle (controller). Além disso, houve uma revisão da documentação, tornando-a mais clara e fácil de compreender.
 1.  **Simplificar a Iteração do Projeto:** Concluído por [Henrique Noronha Fernandes](https://github.com/henrique-noronha). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
-2. **Restruturação da Aplicação para o [Padrão MVC]** (https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/refatorando-para-o-padrao-mvc) e adição de sessions à aplicação. Desenvolvida por [Caio Christhian](https://github.com/CaioChristhian) e Revisada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
-3. **Aprimorar [tela do usuário]** (https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/8b58a4a28c5970c4082dff447949490d8e374572). Desenvolvido por [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
+2. Restruturação da Aplicação para o [Padrão MVC](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/refatorando-para-o-padrao-mvc) e adição de sessions à aplicação. Desenvolvida por [Caio Christhian](https://github.com/CaioChristhian) e Revisada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
+3. Aprimorar [tela do usuário](https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/8b58a4a28c5970c4082dff447949490d8e374572). Desenvolvido por [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
 
 ### Iteração 4 - 05/06/2024
 **Valor:** Nesta iteração, vamos melhorar as páginas de login e registro, corrigir problemas no registro de usuários e garantir que os posts sejam publicados corretamente com os dados dos usuários. Isso significa tornar as páginas de login e registro mais fáceis de usar, consertar qualquer erro que impeça os usuários de se registrarem e garantir que os posts sejam atribuídos às contas dos usuários corretamente.
-1. **[Aprimorar o Front-end da Pagina Login (login.php)]**(https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/ccfdc48f2f4c7c061fa3b30465723ec2594485b5) Concluído por: [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
-2.**[Validação da session, logout, dados do usuario no post]**(https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/ccfdc48f2f4c7c061fa3b30465723ec2594485b5) Concluído por: [Caio Christhian](https://github.com/CaioChristhian). Revisada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
-3.**[Estilizando feed, login e register]**(https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/ccfdc48f2f4c7c061fa3b30465723ec2594485b5). Concluído por: [Henrique Noronha Fernandes](https://github.com/henrique-noronha). Revisado por: [Eduardo Henrique](https://github.com/Kiwitheprogrammer).
+1. [Aprimorar o Front-end da Pagina Login (login.php)](https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/ccfdc48f2f4c7c061fa3b30465723ec2594485b5) Concluído por: [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
+2.[Validação da session, logout, dados do usuario no post](https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/ccfdc48f2f4c7c061fa3b30465723ec2594485b5) Concluído por: [Caio Christhian](https://github.com/CaioChristhian). Revisada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
+3.[Estilizando feed, login e register](https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/ccfdc48f2f4c7c061fa3b30465723ec2594485b5). Concluído por: [Henrique Noronha Fernandes](https://github.com/henrique-noronha). Revisado por: [Eduardo Henrique](https://github.com/Kiwitheprogrammer).
+
+### Iteração 5 - 18/06/2024
+**Valor:**  Corrigidos alguns erros críticos no sistema. Agora, ao tentar registrar um usuário que já existe, o sistema exibe uma mensagem de aviso e impede a duplicação no banco de dados. Também resolvido o problema que ocorria ao pesquisar por um usuário inexistente, fornecendo uma mensagem adequada. Além disso, corrigido o erro que acontecia quando um usuário errava as credenciais de login, exibindo um feedback claro. Realizada a estruturação e integração da API, incluindo a definição e implementação das rotas.
+
+1. [Correção dos erros no sistema de login](https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/3cdcbfc4fd9616cb991a7d7fff159d1009ca03ba) Concluído por: [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisado por [Caio Christhian](https://github.com/CaioChristhian).
+2.[Página de Perfil do Usuário](https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/c764f6091a23597703d2e6fa694320cd84809c1c) Concluído por: [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
+3.[Estruturação, rotas e integração da api](https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/cc98d516620447fef9a5081654d1e278a73dbd20). Concluído por: [Caio Christhian](https://github.com/CaioChristhian). Revisado por: [Eduardo Henrique](https://github.com/Kiwitheprogrammer).
 
    ## Links Úteis
    
 - **Trello:** [Quadro do PostMe no Trello](https://trello.com/b/MxqWN374/postme)
 
-  **Requisitos Adicionais:** [Docs](https://docs.google.com/document/d/1M7oxbPffmNYluee1NX09wIn6JrdhIq6ozt8tr9tmk38/edit)
+- **Requisitos Adicionais:** [Docs](https://docs.google.com/document/d/1M7oxbPffmNYluee1NX09wIn6JrdhIq6ozt8tr9tmk38/edit)
 
 
 
