@@ -36,6 +36,11 @@ class AuthController {
             $_SESSION['loggedin'] = true;
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
+            if ($user['admin'] == 1) {
+                $_SESSION['admin'] = true;
+            } else {
+                $_SESSION['admin'] = false;
+            }
             header("Location: /post-me/public/home");
             exit;
         } else {
@@ -62,4 +67,19 @@ class AuthController {
             exit;
         }
     }
+    public function delete_post() {
+        if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) { // Verifica se o usuário é administrador
+            if (isset($_POST['id']) && !empty($_POST['id'])) {
+                $post_id = $_POST['id'];
+                $this->postModel->deletePostById($post_id);
+                header("Location: /"); // Redireciona após a exclusão
+                exit(); // Garante que o script pare a execução após o redirecionamento
+            } else {
+                echo "ID do post não fornecido.";
+            }
+        } else {
+            echo "Você não tem permissão para deletar posts.";
+        }
+    }    
+    
 }

@@ -19,6 +19,14 @@ $path = preg_replace("~^$prefix~", '', $path);
 $path = preg_replace('/\.php$/', '', $path);
 
 switch ($path) {
+    case '/delete_post':
+        redirectToLoginIfNotLoggedIn(); // Certifique-se de que o usuário está logado
+        $controller = new AuthController();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $postId = $_POST['id'];
+            $controller->delete_post($postId);
+        }
+        break;
     case '/search':
         $controller = new AuthController();
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
