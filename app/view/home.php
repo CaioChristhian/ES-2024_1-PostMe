@@ -101,6 +101,15 @@
                             <a href="/post-me/public/search?username=<?= urlencode($post["username"]) ?>" style="text-decoration: none; color: inherit;">
                                 <?= htmlspecialchars($post["username"]) ?>
                             </a>
+                            <!-- Verificar se o usuário é administrador para exibir o botão de exclusão -->
+                            <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] === true): ?>
+                                <form action="/post-me/public/delete_post" method="POST" style="display: inline;">
+                                    <input type="hidden" name="id" value="<?= htmlspecialchars($post["id"]) ?>">
+                                    <button type="submit" class="btn btn-danger btn-sm" style="float: right;">
+                                        Excluir Postagem
+                                    </button>
+                                </form>
+                            <?php endif; ?>
                         </h5>
                         <p class="card-text"><?= htmlspecialchars($post["texto"]) ?></p>
                     </div>
