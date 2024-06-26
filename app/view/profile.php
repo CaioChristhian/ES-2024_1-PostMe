@@ -2,80 +2,139 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Perfil do <?= isset($_SESSION['usernamesearch']) ? htmlspecialchars($_SESSION['usernamesearch']) : 'Guest'; ?></title>
+    <title>Perfil de <?= isset($_SESSION['usernamesearch']) ? htmlspecialchars($_SESSION['usernamesearch']) : 'Guest'; ?></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #90D0DF; /* Cor do fundo */
+        }
+        .card {
+            border-radius: 1rem;
+            background-color: #FFFFFF; /* Cor do cartão */
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        .card-title {
+            font-weight: 700;
+            color: #202020; /* Cor do título do cartão */
+        }
+        .btn-warning {
+            background-color: #FDD983; /* Cor do botão de editar biografia */
+            border: none;
+            color: #202020; /* Cor do texto do botão de editar biografia */
+        }
+        .btn-warning:hover {
+            background-color: #e0a800; /* Cor do botão de editar biografia ao passar o mouse */
+        }
+        .btn-primary, .btn-danger {
+            border-radius: 0.5rem;
+        }
+        .btn-primary {
+            background-color: #FDD983; /* Nova cor do botão primário */
+            border-color: #FDD983; /* Cor da borda do botão primário */
+        }
+        .btn-primary:hover {
+            background-color: #EB8462; /* Cor do botão primário ao passar o mouse */
+            border-color: #FDD983; /* Cor da borda do botão primário ao passar o mouse */
+        }
+        .btn-danger {
+            background-color: #EB8462; /* Cor do botão de logout */
+            border: none;
+        }
+        .btn-danger:hover {
+            background-color: #D65353; /* Cor do botão de logout ao passar o mouse */
+        }
+        .alert {
+            border-radius: 0.5rem;
+        }
+        .navbar {
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-        <h2 class="text-center"><a href="/app/view/home.php" style="text-decoration: none; color: inherit;">PostMe</a></h2>
-         <hr>
-            <!-- Notificação de erro -->
-            <?php if (isset($_SESSION['error_message'])): ?>
-                <div class="alert alert-danger">
-                    <?= htmlspecialchars($_SESSION['error_message']); ?>
-                </div>
-                <?php unset($_SESSION['error_message']); // Remove a mensagem após exibi-la ?>
-            <?php endif; ?>
-            <!-- Botão de para pagina Principal & Botão de Logout -->
-            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-                <form action="/post-me/public/home" method="get" style="display: inline-block;">
-                    <button type="submit" class="btn btn-primary">Página Principal</button>
-                </form>
-                <form action="/post-me/public/logout" method="post" style="display: inline-block;">
-                    <button type="submit" class="btn btn-danger">Logout</button>
-                </form>
-            </nav>
-            <!-- Informações sobre o Usuario Logado -->
-            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-                <form action="/post-me/public/profile" method="get" class="form-inline w-100">
-                    <div class="h6">Logado como: <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></div>
-                </form>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    
+                    <h2 class="text-center">
+                        <a href="/app/view/home.php" class="text-decoration-none text-dark">
+                            <img src="/logo.png" alt="Logo do PostMe" style="height: 100px;">
+                        </a>
+                    </h2>
+                    <h2 class="text-center"><a href="/app/view/home.php" class="text-decoration-none text-dark">PostMe</a></h2>
 
-            <!-- Pesquisa pelo Usuario -->
-                <form action="/post-me/public/search" method="get" class="form-inline w-100">
-                    <input type="hidden" name="action" value="search">
-                    <label for="username" class="h6 mr-2">Pesquise pelo Usuario:</label>
-                    <input type="text" id="username" name="username" class="form-control mr-2" required>
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </form>
-            </nav>
-            <hr>
-            <!-- Informações sobre o Usuario Pesquisado -->
-            <h3>Informações sobre: </h3>
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="h5"><?= isset($_SESSION['usernamesearch']) ? htmlspecialchars($_SESSION['usernamesearch']) : 'Guest'; ?></span>
-            </div>
-            <!-- Biografia do Usuario Pesquisado -->
-            <div>
-                <h4>Bio:</h4>
-                <p><?= isset($_SESSION['searchbio']) && trim($_SESSION['searchbio']) !== '' ? htmlspecialchars($_SESSION['searchbio']) : 'Nenhuma biografia disponível'; ?></p>
-                <?php if (isset($_SESSION['usernamesearch']) && $_SESSION['usernamesearch'] === $_SESSION['username']) : ?>
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editBioModal">Editar Biografia</button>
-                <?php endif; ?>
-            </div>
-            <hr>
-            <!-- Exibição dos posts apenas do Usuario Pesquisado-->
-            <h2 class="text-center">Post's Anteriores do <?= isset($_SESSION['usernamesearch']) ? htmlspecialchars($_SESSION['usernamesearch']) : 'Guest'; ?></h2>
-            <hr>
-            <?php 
-            $Postsencontrados = false;
-            foreach ($posts as $post) {
-                if ($_SESSION['usernamesearch'] === $post["username"]) {
-                    echo "<div class='card mb-3'>
-                    <div class='card-body'>
-                        <h5 class='card-title'>" . htmlspecialchars($post["username"]) . "</h5>
-                        <p class='card-text'>" . htmlspecialchars($post["texto"]) . "</p>
+                    <!-- Notificação de erro -->
+                    <?php if (isset($_SESSION['error_message'])): ?>
+                        <div class="alert alert-danger">
+                            <?= htmlspecialchars($_SESSION['error_message']); ?>
+                        </div>
+                        <?php unset($_SESSION['error_message']); // Remove a mensagem após exibi-la ?>
+                    <?php endif; ?>
+
+                    <!-- Pesquisa pelo Usuário -->
+                    <div class="d-flex justify-content-between mb-4">
+                        <form action="/post-me/public/home" method="get">
+                            <button type="submit" class="btn btn-primary">Página Principal</button>
+                        </form>
+                        <form action="/post-me/public/search" method="get" class="form-inline">
+                            <input type="hidden" name="action" value="search">
+                            <label for="username" class="h6 mr-2">Pesquise pelo Usuário:</label>
+                            <input type="text" id="username" name="username" class="form-control mr-2" required>
+                            <button type="submit" class="btn btn-primary">Pesquisar</button>
+                        </form>
                     </div>
-                    </div>";
-                    $Postsencontrados = true; 
-                }
-            }
-            if (!$Postsencontrados) {
-                echo "<p>Usuário não realizou nenhuma publicação</p>";
-            }
-            ?>
+
+                    <!-- Botões de Logout e Nome do Usuário -->
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="h5">Logado como: <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></span>
+                        <form action="/post-me/public/logout" method="post">
+                            <button type="submit" class="btn btn-danger">Logout</button>
+                        </form>
+                    </div>
+                    <hr>
+
+                    <!-- Informações sobre o Usuário Pesquisado -->
+                    <h3>Informações sobre: <span class="font-weight-bold"><?= isset($_SESSION['usernamesearch']) ? htmlspecialchars($_SESSION['usernamesearch']) : 'Guest'; ?></span></h3>
+
+                    <!-- Biografia do Usuário Pesquisado -->
+                    <div class="mb-3">
+
+                        <h4>Bio:</h4>
+                        <div class='card mb-3'>
+                        <div class='card-body'>
+                        <p><?= isset($_SESSION['searchbio']) && trim($_SESSION['searchbio']) !== '' ? htmlspecialchars($_SESSION['searchbio']) : 'Nenhuma biografia disponível'; ?></p>
+                        <?php if (isset($_SESSION['usernamesearch']) && $_SESSION['usernamesearch'] === $_SESSION['username']) : ?>
+                            </div>
+                            </div>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#editBioModal">Editar Biografia</button>
+                        <?php endif; ?>
+                    </div>
+                    <hr>
+
+                    <!-- Exibição dos posts do Usuário Pesquisado -->
+                    <h2 class="text-center mb-4">Postagens de <?= isset($_SESSION['usernamesearch']) ? htmlspecialchars($_SESSION['usernamesearch']) : 'Guest'; ?></h2>
+                    <?php 
+                    $Postsencontrados = false;
+                    foreach ($posts as $post) {
+                        if ($_SESSION['usernamesearch'] === $post["username"]) {
+                            echo "<div class='card mb-3'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>" . htmlspecialchars($post["username"]) . "</h5>
+                                <p class='card-text'>" . htmlspecialchars($post["texto"]) . "</p>
+                            </div>
+                            </div>";
+                            $Postsencontrados = true; 
+                        }
+                    }
+                    if (!$Postsencontrados) {
+                        echo "<p>Usuário não realizou nenhuma publicação</p>";
+                    }
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
 </div>
