@@ -34,7 +34,7 @@
         }
         .btn-primary:hover {
             background-color: #EB8462; /* Cor do botão primário ao passar o mouse */
-            border-color: #FDD983; /* Cor da borda do botão primário ao passar o mouse */
+            border-color: #EB8462; /* Cor da borda do botão primário ao passar o mouse */
         }
         .btn-danger {
             background-color: #EB8462; /* Cor do botão de logout */
@@ -53,7 +53,7 @@
     </style>
 </head>
 <body>
-<div class="container mt-5">
+<div class="container mt-3">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card shadow">
@@ -108,9 +108,10 @@
                         <p><?= isset($_SESSION['searchbio']) && trim($_SESSION['searchbio']) !== '' ? htmlspecialchars($_SESSION['searchbio']) : 'Nenhuma biografia disponível'; ?></p>
                         <?php if (isset($_SESSION['usernamesearch']) && $_SESSION['usernamesearch'] === $_SESSION['username']) : ?>
                             </div>
-                            </div>
                             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#editBioModal">Editar Biografia</button>
                         <?php endif; ?>
+                        </div>
+
                     </div>
                     <hr>
 

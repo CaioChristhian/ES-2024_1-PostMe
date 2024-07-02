@@ -26,7 +26,7 @@
         }
         .btn-primary:hover {
             background-color: #EB8462; /* Cor do botão primário ao passar o mouse */
-            border-color: #FDD983;
+            border-color: #EB8462;
         }
         .btn-danger {
             background-color: #EB8462; /* Cor do botão de logout */
