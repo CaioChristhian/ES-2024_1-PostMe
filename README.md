@@ -33,8 +33,11 @@ Realizar o login do usuário na plataforma. Permitir que um usuário cadastrado 
 
 [Index.php](https://github.com/CaioChristhian/ES-2024_1-PostMe/blob/develop/index.php) Autor: [Eduardo Henrique Coelho Ramos](https://github.com/Kiwitheprogrammer). Revisor: [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
 
-### Protótipo de Tela
+### Protótipo de Tela 1
 ![Tela de Login](./images/login.png)
+
+### Protótipo de Tela 2
+![Tela de Login](./images/Login%202.jpeg)
 
 ##  Realizar Cadastro do Usuário
 ### Descrição  
@@ -52,6 +55,8 @@ Realizar o cadastro do usuário na plataforma. Permitir que um usuário interess
 ### Protótipo de Tela
 ![Tela de Cadastro](./images/Cadastro.png)
 
+### Protótipo de Tela 2
+![Tela de Cadastro](./images/Cadastro%202.jpeg)
 
 ##  Realizar Publicação
 ### Descrição 
@@ -65,6 +70,9 @@ Realizar a publicação de  textos na plataforma. Permitir que os usuários publ
 ### Protótipo de Tela
 ![Tela de publicação](./images/public.png)
 
+### Protótipo de Tela 2
+![Tela de publicação](./images/public%202.jpeg)
+
 
 ##  Editar Perfil do Usuário
 ## Descrição 
@@ -75,6 +83,11 @@ Permitir que um usuário cadastrado e logado possa editar as informações de se
 [RF04](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/feature/RF04)
 
 [profile](https://github.com/CaioChristhian/ES-2024_1-PostMe/tree/profile) Autor: [Eduardo Henrique Coelho Ramos](https://github.com/Kiwitheprogrammer). Revisor: [Caio Christhian Lopes Silva](https://github.com/CaioChristhian).
+
+### Protótipo de Tela
+![Tela de Perfil](./images/Perfil%202.jpeg)
+
+![Editar Bio](./images/Bio.jpeg)
 
 
 ## Listagem de Publicações no Feed
@@ -91,6 +104,8 @@ Exibir uma lista de publicações no feed principal da plataforma, permitindo qu
 ### Protótipo de Tela
 ![Tela de posts](./images/feed.png)
 
+### Protótipo de Tela 2
+![Tela de posts](./images/Feed%202.jpeg)
  
 ## Relatório de Gestão
 
@@ -129,11 +144,19 @@ Exibir uma lista de publicações no feed principal da plataforma, permitindo qu
 2.[Página de Perfil do Usuário](https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/c764f6091a23597703d2e6fa694320cd84809c1c) Concluído por: [Eduardo Henrique](https://github.com/Kiwitheprogrammer). Revisada por [Henrique Noronha Fernandes](https://github.com/henrique-noronha).
 3.[Estruturação, rotas e integração da api](https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/cc98d516620447fef9a5081654d1e278a73dbd20). Concluído por: [Caio Christhian](https://github.com/CaioChristhian). Revisado por: [Eduardo Henrique](https://github.com/Kiwitheprogrammer).
 
+### Iteração Final - 03/07/2024
+**Valor:** Foram realizadas mudanças significativas na aparência do projeto, como a criação da logo e cores novas, além da produção da landing page e do slide de apresentação final do projeto.
+
+
    ## Links Úteis
    
 - **Trello:** [Quadro do PostMe no Trello](https://trello.com/b/MxqWN374/postme)
 
 - **Requisitos Adicionais:** [Docs](https://docs.google.com/document/d/1M7oxbPffmNYluee1NX09wIn6JrdhIq6ozt8tr9tmk38/edit)
+
+- **Landing Page** [Link](https://caiochristhian.github.io/LandinPagePostMe/)
+
+- **Apresentação** [Link](https://www.canva.com/design/DAGJO3pyQRs/ERlKNtIVbkeOPxTSKV598Q/edit?utm_content=DAGJO3pyQRs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 
 
