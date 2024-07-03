@@ -34,4 +34,13 @@ class PostModel {
     $result = $this->conn->query($query);
     return $result;
   }
+  
+  public function deletePostById($post_id) {
+    $sql = "DELETE FROM posts WHERE id = ?";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param('i', $post_id); // 'i' indica que o parâmetro é um inteiro
+    $stmt->execute();
+    return $stmt->affected_rows > 0;
+}
+
 }
