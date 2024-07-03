@@ -145,7 +145,7 @@ Exibir uma lista de publicações no feed principal da plataforma, permitindo qu
 3.[Estruturação, rotas e integração da api](https://github.com/CaioChristhian/ES-2024_1-PostMe/commit/cc98d516620447fef9a5081654d1e278a73dbd20). Concluído por: [Caio Christhian](https://github.com/CaioChristhian). Revisado por: [Eduardo Henrique](https://github.com/Kiwitheprogrammer).
 
 ### Iteração Final - 03/07/2024
-**Valor:** Foram realizadas mudanças significativas na aparência do projeto, como a criação da logo e cores novas, além da produção da landing page e do slide de apresentação final do projeto.
+**Valor:** Foram realizadas mudanças significativas na aparência do projeto, como a criação da logo e cores novas, além da produção da landing page e do slide de apresentação final do projeto. Adição do papel de administrador, podendo excluir posts de outros usuários.
 
 
    ## Links Úteis
@@ -158,5 +158,40 @@ Exibir uma lista de publicações no feed principal da plataforma, permitindo qu
 
 - **Apresentação** [Link](https://www.canva.com/design/DAGJO3pyQRs/ERlKNtIVbkeOPxTSKV598Q/edit?utm_content=DAGJO3pyQRs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
+   ## Plano de Instrução para Instalação no Windows
+
+#### Passo 1: Instalar o phpMyAdmin
+1. **Baixar o phpMyAdmin**:
+2. **Configurar o phpMyAdmin**:
+
+#### Passo 2: Configurar a Conexão com o Banco de Dados
+1. **Verificar a conexão com o banco de dados**:
+
+2. **Importar o banco de dados**:
+   - Crie um novo banco de dados chamado `postme`.
+   - Selecione o banco de dados `postme`.
+   - Clique na aba "Importar" e selecione o arquivo `postme.sql` [Disponibilizado] para importar a estrutura e os dados do banco de dados.
+
+#### Passo 3: Rodar o Projeto Localmente
+1. **Navegar até a pasta do projeto**:
+   - Abra o Prompt de Comando (cmd).
+   - Navegue até a pasta `...\ES-2024_1-PostMe\public` usando o comando:
+     ```cmd
+     cd caminho_para_ES-2024_1-PostMe\public
+     ```
+
+2. **Rodar o servidor local**:
+   - No Prompt de Comando, execute o seguinte comando para iniciar o servidor PHP embutido:
+     ```cmd
+     php -S localhost:8000
+     ```
+
+3. **Acessar o projeto**:
+   - Abra seu navegador e acesse `http://localhost:8000`.
+   - O projeto deve estar rodando e acessível a partir dessa URL.
+
+
+
+ 
 
 
